@@ -8,7 +8,7 @@ class PlanetController extends Controller
 {
     public function index()
     {
-       $planets = Planet::with('solarSystem')->get();
+      $planets = Planet::all();
 
         return view('planets.index', ['planets' => $planets]);
     }
